@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<results version="2">
+    <cppcheck version="2.18.0" />
+    <errors>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tmp.root_&apos; is assigned a value that is never used." verbose="Variable &apos;tmp.root_&apos; is assigned a value that is never used." cwe="563" file0="AvlTree.h">
+            <location file="AvlTree.h" line="386" column="15" />
+            <symbol>tmp.root_</symbol>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &apos;tmp.size_&apos; is assigned a value that is never used." verbose="Variable &apos;tmp.size_&apos; is assigned a value that is never used." cwe="563" file0="AvlTree.h">
+            <location file="AvlTree.h" line="391" column="15" />
+            <symbol>tmp.size_</symbol>
+        </error>
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398" file0="WeatherProcessor.cpp">
+            <location file="WeatherProcessor.cpp" line="518" column="21" info="Second condition" />
+            <location file="WeatherProcessor.cpp" line="510" column="21" info="First condition" />
+        </error>
+        <error id="duplicateCondition" severity="style" msg="The if condition is the same as the previous if condition" verbose="The if condition is the same as the previous if condition" cwe="398" file0="WeatherProcessor.cpp">
+            <location file="WeatherProcessor.cpp" line="537" column="21" info="Second condition" />
+            <location file="WeatherProcessor.cpp" line="518" column="21" info="First condition" />
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;node&apos; can be declared as pointer to const" verbose="Variable &apos;node&apos; can be declared as pointer to const" cwe="398" file0="WeatherProcessor.cpp">
+            <location file="Map.h" line="748" column="11" info="Variable &apos;node&apos; can be declared as pointer to const" />
+            <symbol>node</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Date&apos;." verbose="Non-pure function: &apos;Date&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestDate.cpp">
+            <location file="TestDate.cpp" line="176" column="12" />
+            <symbol>Date</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Date&apos;." verbose="Non-pure function: &apos;Date&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestDate.cpp">
+            <location file="TestDate.cpp" line="181" column="13" />
+            <symbol>Date</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Date&apos;." verbose="Non-pure function: &apos;Date&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestDate.cpp">
+            <location file="TestDate.cpp" line="186" column="12" />
+            <symbol>Date</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Date&apos;." verbose="Non-pure function: &apos;Date&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestDate.cpp">
+            <location file="TestDate.cpp" line="191" column="13" />
+            <symbol>Date</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Time&apos;." verbose="Non-pure function: &apos;Time&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestTime.cpp">
+            <location file="TestTime.cpp" line="56" column="17" />
+            <symbol>Time</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Time&apos;." verbose="Non-pure function: &apos;Time&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestTime.cpp">
+            <location file="TestTime.cpp" line="66" column="17" />
+            <symbol>Time</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Time&apos;." verbose="Non-pure function: &apos;Time&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestTime.cpp">
+            <location file="TestTime.cpp" line="76" column="17" />
+            <symbol>Time</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Time&apos;." verbose="Non-pure function: &apos;Time&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestTime.cpp">
+            <location file="TestTime.cpp" line="86" column="17" />
+            <symbol>Time</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Time&apos;." verbose="Non-pure function: &apos;Time&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestTime.cpp">
+            <location file="TestTime.cpp" line="357" column="17" />
+            <symbol>Time</symbol>
+        </error>
+        <error id="assertWithSideEffect" severity="warning" msg="Assert statement calls a function which may have desired side effects: &apos;Time&apos;." verbose="Non-pure function: &apos;Time&apos; is called inside assert statement. Assert statements are removed from release builds so the code inside assert statement is not executed. If the code is needed also in release builds, this is a bug." cwe="398" file0="TestTime.cpp">
+            <location file="TestTime.cpp" line="360" column="17" />
+            <symbol>Time</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398" file0="DateFormatter.cpp">
+            <location file="DateFormatter.cpp" line="37" column="0" />
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::any_of algorithm instead of a raw loop." verbose="Consider using std::any_of algorithm instead of a raw loop." cwe="398" file0="DateFormatter.cpp">
+            <location file="DateFormatter.cpp" line="260" column="0" />
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Time::h_&apos; is never used." verbose="class member &apos;Time::h_&apos; is never used." cwe="563" file0="Time.h">
+            <location file="Time.h" line="81" column="9" />
+            <symbol>Time::h_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Time::m_&apos; is never used." verbose="class member &apos;Time::m_&apos; is never used." cwe="563" file0="Time.h">
+            <location file="Time.h" line="82" column="9" />
+            <symbol>Time::m_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Time::s_&apos; is never used." verbose="class member &apos;Time::s_&apos; is never used." cwe="563" file0="Time.h">
+            <location file="Time.h" line="83" column="9" />
+            <symbol>Time::s_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Stats::N&apos; is never used." verbose="struct member &apos;Stats::N&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="27" column="24" />
+            <symbol>Stats::N</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Stats::mean&apos; is never used." verbose="struct member &apos;Stats::mean&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="28" column="12" />
+            <symbol>Stats::mean</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Stats::sd&apos; is never used." verbose="struct member &apos;Stats::sd&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="29" column="12" />
+            <symbol>Stats::sd</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;Stats::mad&apos; is never used." verbose="struct member &apos;Stats::mad&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="30" column="12" />
+            <symbol>Stats::mad</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;WeatherProcessor::s_countCtx&apos; is never used." verbose="class member &apos;WeatherProcessor::s_countCtx&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="241" column="25" />
+            <symbol>WeatherProcessor::s_countCtx</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;WeatherProcessor::s_statsCtx&apos; is never used." verbose="class member &apos;WeatherProcessor::s_statsCtx&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="242" column="25" />
+            <symbol>WeatherProcessor::s_statsCtx</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;WeatherProcessor::s_collectCtx&apos; is never used." verbose="class member &apos;WeatherProcessor::s_collectCtx&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="243" column="27" />
+            <symbol>WeatherProcessor::s_collectCtx</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;WeatherProcessor::s_solarSum&apos; is never used." verbose="class member &apos;WeatherProcessor::s_solarSum&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="244" column="19" />
+            <symbol>WeatherProcessor::s_solarSum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;WeatherProcessor::s_hasSolar&apos; is never used." verbose="class member &apos;WeatherProcessor::s_hasSolar&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="245" column="17" />
+            <symbol>WeatherProcessor::s_hasSolar</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;WeatherProcessor::s_pccCtx&apos; is never used." verbose="class member &apos;WeatherProcessor::s_pccCtx&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="246" column="23" />
+            <symbol>WeatherProcessor::s_pccCtx</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CountContext::year&apos; is never used." verbose="struct member &apos;CountContext::year&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="186" column="13" />
+            <symbol>CountContext::year</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CountContext::month&apos; is never used." verbose="struct member &apos;CountContext::month&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="187" column="13" />
+            <symbol>CountContext::month</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CountContext::count&apos; is never used." verbose="struct member &apos;CountContext::count&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="188" column="28" />
+            <symbol>CountContext::count</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CountContext::sum&apos; is never used." verbose="struct member &apos;CountContext::sum&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="189" column="21" />
+            <symbol>CountContext::sum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;StatsContext::year&apos; is never used." verbose="struct member &apos;StatsContext::year&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="200" column="13" />
+            <symbol>StatsContext::year</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;StatsContext::month&apos; is never used." verbose="struct member &apos;StatsContext::month&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="201" column="13" />
+            <symbol>StatsContext::month</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;StatsContext::mean&apos; is never used." verbose="struct member &apos;StatsContext::mean&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="202" column="16" />
+            <symbol>StatsContext::mean</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;StatsContext::sqSum&apos; is never used." verbose="struct member &apos;StatsContext::sqSum&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="203" column="21" />
+            <symbol>StatsContext::sqSum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;StatsContext::absSum&apos; is never used." verbose="struct member &apos;StatsContext::absSum&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="204" column="21" />
+            <symbol>StatsContext::absSum</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;StatsContext::count&apos; is never used." verbose="struct member &apos;StatsContext::count&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="205" column="28" />
+            <symbol>StatsContext::count</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CollectContext::month&apos; is never used." verbose="struct member &apos;CollectContext::month&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="216" column="13" />
+            <symbol>CollectContext::month</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CollectContext::array&apos; is never used." verbose="struct member &apos;CollectContext::array&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="217" column="17" />
+            <symbol>CollectContext::array</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CollectContext::capacity&apos; is never used." verbose="struct member &apos;CollectContext::capacity&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="218" column="21" />
+            <symbol>CollectContext::capacity</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;CollectContext::solarFilter&apos; is never used." verbose="struct member &apos;CollectContext::solarFilter&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="220" column="14" />
+            <symbol>CollectContext::solarFilter</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;PCCContext::month&apos; is never used." verbose="struct member &apos;PCCContext::month&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="232" column="13" />
+            <symbol>PCCContext::month</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;PCCContext::winds&apos; is never used." verbose="struct member &apos;PCCContext::winds&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="233" column="17" />
+            <symbol>PCCContext::winds</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;PCCContext::temps&apos; is never used." verbose="struct member &apos;PCCContext::temps&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="234" column="17" />
+            <symbol>PCCContext::temps</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;PCCContext::solars&apos; is never used." verbose="struct member &apos;PCCContext::solars&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="235" column="17" />
+            <symbol>PCCContext::solars</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;PCCContext::count&apos; is never used." verbose="struct member &apos;PCCContext::count&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="236" column="21" />
+            <symbol>PCCContext::count</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;PCCContext::capacity&apos; is never used." verbose="struct member &apos;PCCContext::capacity&apos; is never used." cwe="563" file0="WeatherProcessor.h">
+            <location file="WeatherProcessor.h" line="237" column="21" />
+            <symbol>PCCContext::capacity</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Date::m_day&apos; is never used." verbose="class member &apos;Date::m_day&apos; is never used." cwe="563" file0="Date.h">
+            <location file="Date.h" line="110" column="9" />
+            <symbol>Date::m_day</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Date::m_month&apos; is never used." verbose="class member &apos;Date::m_month&apos; is never used." cwe="563" file0="Date.h">
+            <location file="Date.h" line="111" column="9" />
+            <symbol>Date::m_month</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;Date::m_year&apos; is never used." verbose="class member &apos;Date::m_year&apos; is never used." cwe="563" file0="Date.h">
+            <location file="Date.h" line="112" column="9" />
+            <symbol>Date::m_year</symbol>
+        </error>
+        <error id="useStlAlgorithm" severity="style" msg="Consider using std::count_if algorithm instead of a raw loop." verbose="Consider using std::count_if algorithm instead of a raw loop." cwe="398" file0="TimeFormatter.cpp">
+            <location file="TimeFormatter.cpp" line="45" column="30" />
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;StringList::data_&apos; is never used." verbose="class member &apos;StringList::data_&apos; is never used." cwe="563" file0="StringList.h">
+            <location file="StringList.h" line="78" column="18" />
+            <symbol>StringList::data_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;StringList::size_&apos; is never used." verbose="class member &apos;StringList::size_&apos; is never used." cwe="563" file0="StringList.h">
+            <location file="StringList.h" line="79" column="17" />
+            <symbol>StringList::size_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="class member &apos;StringList::capacity_&apos; is never used." verbose="class member &apos;StringList::capacity_&apos; is never used." cwe="563" file0="StringList.h">
+            <location file="StringList.h" line="80" column="17" />
+            <symbol>StringList::capacity_</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;WeatherReading::wind_ms&apos; is never used." verbose="struct member &apos;WeatherReading::wind_ms&apos; is never used." cwe="563" file0="WeatherReading.h">
+            <location file="WeatherReading.h" line="18" column="11" />
+            <symbol>WeatherReading::wind_ms</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;WeatherReading::temp_c&apos; is never used." verbose="struct member &apos;WeatherReading::temp_c&apos; is never used." cwe="563" file0="WeatherReading.h">
+            <location file="WeatherReading.h" line="19" column="11" />
+            <symbol>WeatherReading::temp_c</symbol>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &apos;WeatherReading::solar_wm2&apos; is never used." verbose="struct member &apos;WeatherReading::solar_wm2&apos; is never used." cwe="563" file0="WeatherReading.h">
+            <location file="WeatherReading.h" line="20" column="11" />
+            <symbol>WeatherReading::solar_wm2</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;passByValue&apos; is never used." verbose="The function &apos;passByValue&apos; is never used." cwe="561">
+            <location file="TestAvlTree.cpp" line="106" column="12" />
+            <symbol>passByValue</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;passByConstRef&apos; is never used." verbose="The function &apos;passByConstRef&apos; is never used." cwe="561">
+            <location file="TestAvlTree.cpp" line="117" column="8" />
+            <symbol>passByConstRef</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;passByRef&apos; is never used." verbose="The function &apos;passByRef&apos; is never used." cwe="561">
+            <location file="TestAvlTree.cpp" line="128" column="6" />
+            <symbol>passByRef</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;checkSolarPresence&apos; is never used." verbose="The function &apos;checkSolarPresence&apos; is never used." cwe="561">
+            <location file="WeatherProcessor.cpp" line="741" column="24" />
+            <symbol>checkSolarPresence</symbol>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 169/966" verbose="Active checkers: 169/966" />
+    </errors>
+</results>

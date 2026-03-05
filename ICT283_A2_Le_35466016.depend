@@ -1,0 +1,263 @@
+# depslib dependency file v1.0
+1762413177 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\csvparser.cpp
+	"CSVParser.h"
+	<cctype>
+	<cstdlib>
+
+1762413177 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\csvparser.h
+	<string>
+	"StringList.h"
+
+1762331838 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\stringlist.h
+	<string>
+	<cstddef>
+
+1762372980 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\date.cpp
+	"Date.h"
+	"DateFormatter.h"
+
+1762331812 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\date.h
+	<istream>
+	<iostream>
+
+1762826409 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\dateformatter.h
+	<sstream>
+	<string>
+	<stdexcept>
+	<cctype>
+	<iomanip>
+	"Map.h"
+	"Date.h"
+
+1762372418 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\map.h
+	<cstddef>
+	<stdexcept>
+
+1762373018 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\dateformatter.cpp
+	"DateFormatter.h"
+	"Map.h"
+
+1762413177 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\datetimeparser.cpp
+	"DateTimeParser.h"
+	"DateFormatter.h"
+	"TimeFormatter.h"
+	<sstream>
+
+1762413177 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\datetimeparser.h
+	<string>
+	"Date.h"
+	"Time.h"
+
+1762412336 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\time.h
+	<stdexcept>
+	<iosfwd>
+
+1762412336 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\timeformatter.h
+	<string>
+	<iosfwd>
+	<stdexcept>
+	"Time.h"
+
+1762413177 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\datetimeutils.cpp
+	"DateTimeUtils.h"
+
+1762413177 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\datetimeutils.h
+	"WeatherReading.h"
+
+1762367482 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\weatherreading.h
+	"Date.h"
+	"Time.h"
+
+1762413177 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\energycalculator.cpp
+	"EnergyCalculator.h"
+
+1762413177 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\energycalculator.h
+
+1762413359 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\main.cpp
+	<iostream>
+	<fstream>
+	<limits>
+	<iomanip>
+	"DateTimeUtils.h"
+	"WeatherProcessor.h"
+
+1762413177 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\weatherprocessor.h
+	<string>
+	<fstream>
+	<sstream>
+	"WeatherReading.h"
+	"AvlTree.h"
+	"Map.h"
+	"StringList.h"
+
+1762334242 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\avltree.h
+	<ostream>
+
+1762413359 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\statisticscalculator.cpp
+	"StatisticsCalculator.h"
+	<cmath>
+
+1762413455 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\statisticscalculator.h
+	<cstddef>
+
+1762373420 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\stringlist.cpp
+	"StringList.h"
+
+1762412336 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\time.cpp
+	"Time.h"
+	"TimeFormatter.h"
+	<ostream>
+	<iomanip>
+
+1762412287 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\timeformatter.cpp
+	"TimeFormatter.h"
+	<cstdio>
+	<sstream>
+	<iomanip>
+
+1762828014 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\weatherprocessor.cpp
+	"WeatherProcessor.h"
+	"CSVParser.h"
+	"DateTimeParser.h"
+	"DateTimeUtils.h"
+	"EnergyCalculator.h"
+	"StatisticsCalculator.h"
+	<iostream>
+	<fstream>
+	<cmath>
+	<iomanip>
+
+1762331812 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\weatherreading.cpp
+	"WeatherReading.h"
+
+1762413176 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\csvparser.cpp
+	"CSVParser.h"
+	<cctype>
+	<cstdlib>
+
+1762413176 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\csvparser.h
+	<string>
+	"StringList.h"
+
+1762331838 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\stringlist.h
+	<string>
+	<cstddef>
+
+1762372980 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\date.cpp
+	"Date.h"
+	"DateFormatter.h"
+
+1762331812 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\date.h
+	<istream>
+	<iostream>
+
+1762826408 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\dateformatter.h
+	<sstream>
+	<string>
+	<stdexcept>
+	<cctype>
+	<iomanip>
+	"Map.h"
+	"Date.h"
+
+1762372418 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\map.h
+	<cstddef>
+	<stdexcept>
+
+1762373018 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\dateformatter.cpp
+	"DateFormatter.h"
+	"Map.h"
+
+1762413176 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\datetimeparser.cpp
+	"DateTimeParser.h"
+	"DateFormatter.h"
+	"TimeFormatter.h"
+	<sstream>
+
+1762413176 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\datetimeparser.h
+	<string>
+	"Date.h"
+	"Time.h"
+
+1762412336 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\time.h
+	<stdexcept>
+	<iosfwd>
+
+1762412336 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\timeformatter.h
+	<string>
+	<iosfwd>
+	<stdexcept>
+	"Time.h"
+
+1762413176 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\datetimeutils.cpp
+	"DateTimeUtils.h"
+
+1762413176 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\datetimeutils.h
+	"WeatherReading.h"
+
+1762367482 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\weatherreading.h
+	"Date.h"
+	"Time.h"
+
+1762413176 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\energycalculator.cpp
+	"EnergyCalculator.h"
+
+1762413176 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\energycalculator.h
+
+1762413358 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\main.cpp
+	<iostream>
+	<fstream>
+	<limits>
+	<iomanip>
+	"DateTimeUtils.h"
+	"WeatherProcessor.h"
+
+1762413176 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\weatherprocessor.h
+	<string>
+	<fstream>
+	<sstream>
+	"WeatherReading.h"
+	"AvlTree.h"
+	"Map.h"
+	"StringList.h"
+
+1762334242 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\avltree.h
+	<ostream>
+
+1762413358 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\statisticscalculator.cpp
+	"StatisticsCalculator.h"
+	<cmath>
+
+1762413454 c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\statisticscalculator.h
+	<cstddef>
+
+1762373420 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\stringlist.cpp
+	"StringList.h"
+
+1762412336 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\time.cpp
+	"Time.h"
+	"TimeFormatter.h"
+	<ostream>
+	<iomanip>
+
+1762412286 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\timeformatter.cpp
+	"TimeFormatter.h"
+	<cstdio>
+	<sstream>
+	<iomanip>
+
+1762828014 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\weatherprocessor.cpp
+	"WeatherProcessor.h"
+	"CSVParser.h"
+	"DateTimeParser.h"
+	"DateTimeUtils.h"
+	"EnergyCalculator.h"
+	"StatisticsCalculator.h"
+	<iostream>
+	<fstream>
+	<cmath>
+	<iomanip>
+
+1762331812 source:c:\users\admin\onedrive - murdoch university\tsa 2025\ict283\codes\ict283_assignment2_le_35466016\code\weatherreading.cpp
+	"WeatherReading.h"
+
