@@ -1,101 +1,198 @@
-# Advanced Weather Analytics System
-**ICT283 Data Structures & Abstraction — Murdoch University (2025)**
+# Weather Data Processing System V2
 
-An extension of Assignment 1, this C++11 application ingests meteorological data from
-**multiple CSV files**, applies advanced statistical analysis, and reports monthly trends
-via a CLI menu. Key additions include an AVL Tree with function pointers, a custom
-Map class, Pearson Correlation Coefficient computation, and Mean Absolute Deviation output.
+A C++ console application that ingests multi-year meteorological CSV data and provides statistical analysis of wind speed, ambient temperature, and solar radiation. Built for **ICT283 – Data Structures & Abstractions (Assignment 2)** at Murdoch University.
 
 ---
 
 ## Features
 
-| Menu Option | Description | Output |
-|---|---|---|
-| 1 | Average wind speed + std dev for a given month/year | Screen |
-| 2 | Average temperature + std dev for each month of a year | Screen |
-| 3 | Sample Pearson Correlation Coefficient (S_T, S_R, T_R) for a given month across all years | Screen |
-| 4 | Combined wind, temperature & solar report with stdev and MAD | `WindTempSolar.csv` |
+| Menu Option | Description |
+|---|---|
+| **1** | Average wind speed (km/h) + sample standard deviation for a given month/year |
+| **2** | Average ambient temperature + SD for every month of a given year |
+| **3** | Sample Pearson Correlation Coefficient (sPCC) between wind/temperature/solar radiation for a given month (across all years) |
+| **4** | Export annual Wind–Temperature–Solar summary to `WindTempSolar.csv` |
+| **5** | Exit |
 
----
-
-## Technical Highlights
-
-- **Custom AVL Tree (`AvlTree.h`)** — self-balancing BST template with function pointer support
-  for flexible, reusable in-order/pre-order/post-order traversal callbacks; O(log n) insert & lookup
-- **Custom `Map<K,V>` class (`Map.h`)** — templated associative container built on top of the
-  AVL Tree, used for keyed monthly data aggregation (bonus requirement, fully justified with pros/cons)
-- **Sample Pearson Correlation Coefficient** — `StatisticsCalculator` computes sPCC across
-  wind speed, air temperature and solar radiation pairings, fully decoupled from weather domain types
-- **Mean Absolute Deviation (MAD)** — added to all average outputs alongside standard deviation
-  in the `WindTempSolar.csv` report: `Month, avg(stdev, mad), avg(stdev, mad), solar`
-- **Multi-file data loading** — reads all file names from `data/data_source.txt` and ingests
-  multiple years of CSV data in a single program run
-- **Dedicated utility classes** — `CSVParser`, `EnergyCalculator`, `DateTimeParser`,
-  `DateTimeUtils`, `TimeFormatter` each handle one responsibility, minimising coupling across 15+ files
-- **6 test suites** — `TestAvlTree`, `TestMap`, `TestDate`, `TestTime`,
-  `TestWeatherProcessor`, `TestWeatherReading`; all expected values verified against spreadsheet calculations
+On startup the program loads all CSV files listed in `data/data_source.txt` and writes a full audit log (`AuditRecord.csv`) recording every accepted reading.
 
 ---
 
 ## Project Structure
 
 ```
-├── main.cpp                    # Entry point & menu loop
-├── WeatherProcessor.h/.cpp     # Core analytics engine
-├── WeatherReading.h/.cpp       # Data model for a single sensor reading
-├── AvlTree.h                   # Custom self-balancing AVL Tree (template + function pointers)
-├── Map.h                       # Custom Map class built on AVL Tree
-├── StatisticsCalculator.h/.cpp # Pearson CC, std dev, MAD — decoupled from weather types
-├── EnergyCalculator.h/.cpp     # Solar radiation unit conversion (W/m² → kWh/m²)
-├── CSVParser.h/.cpp            # Dynamic column-detection CSV parser
-├── Date.h/.cpp                 # Date class
-├── Time.h/.cpp                 # Time class
-├── DateFormatter.h/.cpp        # Date parsing and formatting
-├── DateTimeParser.h/.cpp       # Combined datetime parsing
-├── DateTimeUtils.h/.cpp        # Datetime utility helpers
-├── TimeFormatter.h/.cpp        # Time formatting
-├── StringList.h/.cpp           # Custom string list
-├── TestAvlTree.cpp             # Unit tests — AVL Tree
-├── TestMap.cpp                 # Unit tests — Map
-├── TestDate.cpp                # Unit tests — Date
-├── TestTime.cpp                # Unit tests — Time
-├── TestWeatherProcessor.cpp    # Integration tests — analytics engine
-├── TestWeatherReading.cpp      # Unit tests — WeatherReading
-└── WindTempSolar.csv           # Sample output file
+Weather-Data-Processing-System-V2/
+│
+├── main.cpp                    # Entry point – menu loop & input validation
+│
+├── WeatherProcessor.cpp/.h     # Core engine: data loading, query methods, CSV export
+├── WeatherReading.cpp/.h       # Value object: one timestamped sensor reading
+│
+├── AvlTree.h                   # Generic templated self-balancing AVL tree
+├── Map.h                       # Generic templated ordered map (AVL-tree backed)
+│
+├── Date.cpp/.h                 # Date value type with validation & comparison
+├── Time.cpp/.h                 # Time value type (HH:MM)
+├── DateFormatter.cpp/.h        # Date → string formatting utilities
+├── TimeFormatter.cpp/.h        # Time → string formatting utilities
+├── DateTimeParser.cpp/.h       # Parses "DD/MM/YYYY HH:MM" strings
+├── DateTimeUtils.cpp/.h        # Month-name lookup & shared date helpers
+│
+├── CSVParser.cpp/.h            # Tokenises CSV lines into field arrays
+├── StatisticsCalculator.cpp/.h # Mean, sample SD, Pearson r helpers
+├── EnergyCalculator.cpp/.h     # Solar radiation → energy conversion
+├── StringList.cpp/.h           # Lightweight resizable string array
+│
+├── TestAvlTree.cpp             # Unit tests – AVL tree operations
+├── TestDate.cpp                # Unit tests – Date class
+├── TestMap.cpp                 # Unit tests – Map class
+├── TestTime.cpp                # Unit tests – Time class
+├── TestWeatherProcessor.cpp    # Unit tests – query & export logic
+├── TestWeatherReading.cpp      # Unit tests – WeatherReading class
+│
+├── AuditRecord.csv             # Auto-generated on each run (all loaded readings)
+├── WindTempSolar.csv           # Auto-generated by menu option 4
+│
+├── data/
+│   └── data_source.txt         # Manifest listing CSV data files to load
+│
+├── ICT283_A2_Le_35466016.cbp   # Code::Blocks project file
+├── CppCheckResults.xml         # Static analysis output (CppCheck)
+└── cppcheck.txt                # CppCheck plain-text report
 ```
 
 ---
 
-## How to Build & Run
+## Data Structures
 
-1. Open `ICT283_LAB10_LeDo.cbp` (Lab 10) or `ICT283_LAB11_LeDo.cbp` (Lab 11) in **CodeBlocks**
-2. Set C++ standard to **C++11**
-3. Edit `data/data_source.txt` — list one data file name per line for multi-file loading
-4. Click **Build → Run**
+All data is stored in a **custom templated AVL tree (`AvlTree<K,V>`)** and a **custom ordered map (`Map<K,V>`)** built on top of it — no STL associative containers are used. The hierarchy is:
 
-> The program reads all data file names from `data/data_source.txt` — no recompilation needed to add or switch datasets.
+```
+Map<int /*year*/, Map<int /*month*/, Vector<WeatherReading>>>
+```
+
+This gives O(log n) lookup by year and month while keeping readings in chronological order within each bucket.
 
 ---
 
-## Data Structures Used
+## Data Format
 
-| Structure | Type | Usage |
+Each CSV data file must contain the following columns (order matters):
+
+```
+WAST,DP,Dta,Dts,EV,QFE,QFF,QNH,RF,RH,S,SR,ST1,ST2,ST3,ST4,Sx,T
+```
+
+Key columns extracted per reading:
+
+| Column | Field | Unit |
 |---|---|---|
-| `AvlTree<T>` | Custom template | Primary sorted storage with function pointer traversal |
-| `Map<K,V>` | Custom template (AVL-backed) | Monthly keyed aggregation (bonus) |
-| `std::map` | STL | Secondary keyed lookups where justified |
-| `Vector<T>` | Custom template (from Assm 1) | Linear storage, wraps all array-like data |
+| `WAST` | Timestamp | `DD/MM/YYYY HH:MM` |
+| `S` | Wind speed | m/s (converted to km/h for output) |
+| `SR` | Solar radiation | W/m² |
+| `T` | Ambient temperature | °C |
+
+The manifest file `data/data_source.txt` lists one CSV filename per line. All files are loaded sequentially at startup.
 
 ---
 
-## Data Source
+## Build Instructions
 
-Sensor data from [Murdoch University Weather Station](http://wwwmet.murdoch.edu.au/).
-Columns used: `WAST` (datetime), `S` (wind speed m/s → km/h), `SR` (solar radiation W/m² → kWh/m²), `T` (air temperature °C).
+### Prerequisites
+- C++11-compatible compiler (GCC recommended)
+- [Code::Blocks](https://www.codeblocks.org/) IDE **or** any CMake/Makefile build system
+
+### Build with Code::Blocks
+1. Open `ICT283_A2_Le_35466016.cbp`
+2. Select **Build → Build** (or press `F9`)
+3. Run the generated executable from the project root so that `data/data_source.txt` resolves correctly
+
+### Build with g++ (manual)
+```bash
+g++ -std=c++11 -O2 \
+    main.cpp WeatherProcessor.cpp WeatherReading.cpp \
+    Date.cpp Time.cpp DateFormatter.cpp TimeFormatter.cpp \
+    DateTimeParser.cpp DateTimeUtils.cpp \
+    CSVParser.cpp StatisticsCalculator.cpp EnergyCalculator.cpp StringList.cpp \
+    -o WeatherProcessor
+```
 
 ---
 
-## Technologies
+## Usage
 
-`C++11` · `CodeBlocks` · `Doxygen` · `AVL Tree` · `Function Pointers` · `STL map` · `OOP` · `Statistical Analysis`
+```
+./WeatherProcessor
+```
+
+The program writes `AuditRecord.csv` on startup, then presents an interactive menu:
+
+```
+=========================== Start ============================
+
+Menu Options:
+1. Average wind speed (km/h) and sample SD for a month/year
+2. Average ambient temperature and SD for EACH month of a year
+3. Sample Pearson Correlation Coefficient (sPCC) for a specified month
+4. Write yearly CSV (WindTempSolar.csv)
+5. Exit
+
+Choice:
+```
+
+### Example — Option 1
+```
+Choice: 1
+Year: 2020
+Month (1-12): 6
+June 2020:
+Average speed: 12.4 km/h
+Sample stdev: 3.2
+```
+
+### Example — Option 3
+```
+Choice: 3
+Month (1-12): 3
+Sample Pearson Correlation Coefficient for March
+S_T: -0.15
+S_R:  0.42
+T_R:  0.38
+```
+
+### Output Files
+
+| File | Description |
+|---|---|
+| `AuditRecord.csv` | Every loaded reading: `Date,Time,S[m/s],T[C],SR[W/m^2]` |
+| `WindTempSolar.csv` | Monthly means for a selected year: `Month,AvgWind(km/h),AvgTemp(°C),TotalSolar(kWh/m²)` |
+
+---
+
+## Testing
+
+Six unit-test files cover all major classes. To run them, replace `main.cpp` with the desired test file in your build:
+
+```bash
+# Example: run WeatherProcessor tests
+g++ -std=c++11 TestWeatherProcessor.cpp WeatherProcessor.cpp \
+    WeatherReading.cpp Date.cpp Time.cpp DateFormatter.cpp \
+    TimeFormatter.cpp DateTimeParser.cpp DateTimeUtils.cpp \
+    CSVParser.cpp StatisticsCalculator.cpp EnergyCalculator.cpp StringList.cpp \
+    -o TestWeatherProcessor && ./TestWeatherProcessor
+```
+
+---
+
+## Static Analysis
+
+The project was analysed with [CppCheck](https://cppcheck.sourceforge.io/). Full results are available in:
+- `CppCheckResults.xml` — machine-readable XML report
+- `cppcheck.txt` — plain-text summary
+
+---
+
+## Author
+
+**Lê Đỗ Nguyên Tú** — Student ID 35466016  
+Murdoch University · ICT283 Data Structures & Abstractions
